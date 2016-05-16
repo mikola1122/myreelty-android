@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="comments"
+            type="com.helio.myreelty.network.models.NetworkCommentModel" />
+        <import type="com.helio.myreelty.video_player.util.DateConvector" alias="conv"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/video_comments_padding">
+
+            <ImageView
+                android:id="@+id/video_comment_icon"
+                android:layout_width="@dimen/video_comments_icon_size"
+                android:layout_height="@dimen/video_comments_icon_size"
+                app:imageUrl="@{comments.user.getAvatar_url}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="13dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:id="@+id/video_comment_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="@{comments.user.getName}"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:id="@+id/video_comment_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{conv.formatDateFromString(comments.createdAt)}"
+                        android:textColor="@color/black_53"
+                        android:textSize="10sp"
+                        app:fontName="@string/roboto_regular" />
+
+                </LinearLayout>
+
+                <com.helio.myreelty.common.custom_view.FontTextView
+                    android:id="@+id/video_comment_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@{comments.content}"
+                    android:textColor="@color/black_86"
+                    android:textSize="12sp"
+                    app:fontName="@string/roboto_regular" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

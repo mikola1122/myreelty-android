@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/google_map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/map_fab_filter"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_filter_list_white_24_px" />
+
+    </android.support.design.widget.CoordinatorLayout>

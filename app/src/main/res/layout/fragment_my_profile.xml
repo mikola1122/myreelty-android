@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.helio.myreelty.network.models.UserModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/video_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="22dp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:imageSrc = '@{user.getAvatar_url()}'/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:orientation="vertical">
+
+                                <com.helio.myreelty.common.custom_view.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{user.getName()}"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    app:fontName="@string/roboto_medium" />
+
+                                <com.helio.myreelty.common.custom_view.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@{user.getCreatedAt()}"
+                                    android:textColor="@color/black_53"
+                                    android:textSize="10sp"
+                                    app:fontName="@string/roboto_regular" />
+
+                                <com.helio.myreelty.common.custom_view.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="@{user.email}"
+                                    android:textColor="@color/black_53"
+                                    android:textSize="10sp"
+                                    app:fontName="@string/roboto_regular" />
+
+                                <com.helio.myreelty.common.custom_view.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="@{user.phone}"
+                                    android:textColor="@color/black_53"
+                                    android:textSize="10sp"
+                                    app:fontName="@string/roboto_regular" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/my_profile_menu"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentTop="true"
+                                    android:clickable="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_dots_vertical" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <com.helio.myreelty.common.custom_view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:visibility="gone"
+                            android:text="@{user.description}" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey"
+                    android:orientation="horizontal">
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="@string/my_videos"
+                        android:textColor="@color/black_53"
+                        android:textSize="14sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:id="@+id/my_profile_video_list_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_regular" />
+                </LinearLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_profile_video_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

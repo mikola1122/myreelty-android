@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/filter_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/filter_back_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@drawable/back" />
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/filters"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:fontName="@string/roboto_medium" />
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:id="@+id/reset_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:gravity="center_vertical|end"
+                android:padding="4dp"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:fontName="@string/roboto_medium" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/property_type"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/spinner_style"
+                android:entries="@array/filter_spinner"/>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+            <RadioGroup
+                android:id="@+id/filter_status_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/on_the_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="31dp"
+                    android:text="@string/on_the_market"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/off_the_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/off_the_market" />
+
+            </RadioGroup>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/price_range"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <org.florescu.android.rangeseekbar.RangeSeekBar
+                android:id="@+id/price_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleThumb="false"
+                app:valuesAboveThumbs="true"
+                app:textAboveThumbsColor="@color/black"
+                app:activateOnDefaultValues="true"
+                app:absoluteMinValue="50000"
+                app:absoluteMaxValue="1060000"
+                android:layout_marginBottom="5dp"
+                app:activeColor="@color/coral_pink"
+                app:barHeight="1dp"
+                app:thumbDisabled="@mipmap/rectangle_630"
+                app:thumbNormal="@mipmap/rectangle_630"
+                app:thumbPressed="@mipmap/rectangle_630"/>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/beds"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/filter_beds_radio_group"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/beds_any"
+                    android:layout_width="53dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/first_radio_btn_style"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/black"
+                    android:tag="0"
+                    android:text="@string/any"/>
+                <RadioButton
+                    android:id="@+id/beds_1"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:tag="1"
+                    android:textColorHint="@color/black"
+                    android:text="@string/_1"/>
+
+                <RadioButton
+                    android:id="@+id/beds_2"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="2"
+                    android:text="@string/_2"/>
+
+                <RadioButton
+                    android:id="@+id/beds_3"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="3"
+                    android:text="@string/_3"/>
+
+                <RadioButton
+                    android:id="@+id/beds_4"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="4"
+                    android:text="@string/_4"/>
+
+                <RadioButton
+                    android:id="@+id/beds_5"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/lust_radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="5"
+                    android:text="@string/_5"/>
+
+            </RadioGroup>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/baths"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/filter_baths_radio_group"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/baths_any"
+                    android:layout_width="53dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/first_radio_btn_style"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/black"
+                    android:tag="0"
+                    android:text="@string/any"/>
+
+                <RadioButton
+                    android:id="@+id/baths_1"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/black"
+                    android:tag="1"
+                    android:text="@string/_1"/>
+
+                <RadioButton
+                    android:id="@+id/baths_2"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="2"
+                    android:text="@string/_2"/>
+
+                <RadioButton
+                    android:id="@+id/baths_3"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="3"
+                    android:text="@string/_3"/>
+
+                <RadioButton
+                    android:id="@+id/baths_4"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black"
+                    android:tag="4"
+                    android:text="@string/_4"/>
+
+                <RadioButton
+                    android:id="@+id/baths_5"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/lust_radio_btn_style"
+                    android:button="@null"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:tag="5"
+                    android:text="@string/_5"/>
+
+            </RadioGroup>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/square_foot_range"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <org.florescu.android.rangeseekbar.RangeSeekBar
+                android:id="@+id/square_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleThumb="false"
+                app:valuesAboveThumbs="true"
+                app:textAboveThumbsColor="@color/black"
+                app:activateOnDefaultValues="true"
+                app:absoluteMinValue="0"
+                app:absoluteMaxValue="3000"
+                app:activeColor="@color/coral_pink"
+                app:barHeight="1dp"
+                app:thumbDisabled="@mipmap/rectangle_630"
+                app:thumbNormal="@mipmap/rectangle_630"
+                app:thumbPressed="@mipmap/rectangle_630"/>
+
+
+            <com.helio.myreelty.common.custom_view.FontButton
+                android:id="@+id/btn_apply_filters"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/ronded_join_with_login_active"
+                android:text="@string/apply_filters"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

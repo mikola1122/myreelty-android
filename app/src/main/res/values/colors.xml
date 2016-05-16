@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFD5A5F</color>
+    <color name="colorPrimaryDark">#eb5156</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_53">#87000000</color>
+    <color name="black_86">#db000000</color>
+    <color name="black_82">#d2000000</color>
+    <color name="black_12">#26000000</color>
+    <color name="black">#000000</color>
+    <color name="cursor">#3036b1</color>
+    <color name="red">#ff5a5f</color>
+    <color name="coral_pink">#fd5a5f</color>
+    <color name="coral_pink_60">#8ffd5a5f</color>
+    <color name="white_50">#78ffffff</color>
+    <color name="grey">#efefef</color>
+    <color name="warm_grey">#767676</color>
+    <color name="denim_blue">#3c5a98</color>
+    <color name="white_three">#e6e6e6</color>
+    <color name="transparent">#00000000</color>
+    <color name="radio_button">#979797</color>
+    <color name="error_color">#f7d70b0f</color>
+</resources>

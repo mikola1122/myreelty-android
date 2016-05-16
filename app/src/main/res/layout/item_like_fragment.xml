@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="like"
+            type="com.helio.myreelty.network.models.LikeModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal"
+        android:paddingBottom="13dp"
+        android:paddingStart="11dp"
+        android:paddingTop="13dp"
+        android:paddingEnd="11dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white">
+        
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            app:imageUrl="@{like.getUser().getAvatar_url()}"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:text="@{like.getUser().getName()}"
+                android:textStyle="bold"/>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="10sp"
+                android:text="@{like.getCreatedAt()}"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

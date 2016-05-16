@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/log_in_layout_email"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:layout_gravity="center"
+        android:divider="@color/colorAccent">
+
+        <com.helio.myreelty.common.custom_view.FontEditText
+            android:id="@+id/log_in_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            android:hint="@string/hint_email"
+            app:fontName="@string/roboto_medium"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/log_in_layout_password"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.helio.myreelty.common.custom_view.FontEditText
+            android:id="@+id/log_in_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:hint="@string/hint_password"
+            app:fontName="@string/roboto_medium" />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.helio.myreelty.common.custom_view.FontButton
+        android:id="@+id/bt_log_in"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="222dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/ronded_join_with_login"
+        android:text="@string/login"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        app:fontName="@string/roboto_regular" />
+
+    <com.helio.myreelty.common.custom_view.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp"
+        android:text="@string/or"
+        android:textColor="@color/black_53"
+        android:textSize="10sp"
+        app:fontName="@string/roboto_medium" />
+
+    <LinearLayout
+        android:id="@+id/bt_join_with_facebook"
+        android:layout_width="222dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_join_with_fasebook"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/facebook_logo" />
+
+        <com.helio.myreelty.common.custom_view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:text="@string/log_in_with_facebook"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:fontName="@string/roboto_regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <com.helio.myreelty.common.custom_view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="@color/black_53"
+            android:textSize="10sp"
+            app:fontName="@string/roboto_medium" />
+
+        <com.helio.myreelty.common.custom_view.FontTextView
+            android:id="@+id/link_to_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/text_join"
+            android:textColor="@color/red"
+            android:textSize="10sp"
+            app:fontName="@string/roboto_medium" />
+
+    </LinearLayout>
+</LinearLayout>

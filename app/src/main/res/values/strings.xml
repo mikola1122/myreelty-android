@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">My Reelty</string>
+    <string name="action_settings">Settings</string>
+    <string name="roboto_medium">roboto-medium.ttf</string>
+    <string name="roboto_light">roboto-light.ttf</string>
+    <string name="roboto_regular">roboto-regular.ttf</string>
+    <string name="roboto_bold">roboto-bold.ttf</string>
+    <string name="recent_top_reviews">Recent top reviews</string>
+    <string name="MAP_API_KEY">AIzaSyD-CpPAWPO0w8VrxbJUzEku3CWF4gacJTE</string>
+    <string name="search_by_zip_adress_or_city">Zip, Address or City</string>
+    <string name="up_next">UP NEXT</string>
+    <string name="details">DETAILS</string>
+    <string name="comments">COMMENTS</string>
+    <string name="likes">LIKES</string>
+    <string name="property_overview">Property Overview</string>
+    <string name="property_features">Property Features</string>
+    <string name="status">Status</string>
+    <string name="price">Price</string>
+    <string name="property_type">Property type</string>
+    <string name="beds">Beds</string>
+    <string name="baths">Baths</string>
+    <string name="size">Size</string>
+    <string name="join">JOIN</string>
+    <string name="join_myreelty_or_log_in">Join MyReelty or log in to upload and comment videos</string>
+    <string name="continue_with_facebook">CONTINUE WITH FACEBOOK</string>
+    <string name="or">or</string>
+    <string name="join_with_email">Sign Up</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="log_in">Log In.</string>
+    <string name="terms_of_service"><u>Terms of service</u></string>
+    <string name="and">and</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="by_joining_myreelty_you_agree_to_our">By joining MyReelty, you agree to our</string>
+    <string name="join_with_facebook">JOIN WITH FACEBOOK</string>
+    <string name="login">Log In</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">First and Last name</string>
+    <string name="don_t_have_an_account">Don`t have an account?</string>
+    <string name="text_join">Join.</string>
+    <string name="log_in_with_facebook">LOG IN WITH FACEBOOK</string>
+    <string name="registration_successful">Registration successful</string>
+    <string name="registration_error">Registration error</string>
+    <string name="error_message_user_name">Username must be 5 - 30 characters</string>
+    <string name="error_message_email">Please enter an Email</string>
+    <string name="error_message_password">Please enter a password</string>
+    <string name="error_message_short_password">Password must be at least 6 symbols</string>
+    <string name="you_have_no_bookmarks_nthey_will_be_saved_here">You have no bookmarks.\nThey will be saved here.</string>
+    <string name="remove_from_bookmarks">Remove from Bookmarks</string>
+    <string name="add_to_bookmarks">Add to Bookmarks</string>
+    <string name="like">Like</string>
+    <string name="liked">Liked</string>
+    <string name="my_videos">MY VIDEOS</string>
+    <string name="video_comments_defoult_content">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one…</string>
+    <string name="share_this_video">Share this video</string>
+    <string name="on_the_market">On the market</string>
+    <string name="off_the_market">Off the market</string>
+    <string name="price_range">Price Range</string>
+    <string name="any">\t   Any</string>
+    <string name="_1">\t\t1</string>
+    <string name="_2">\t\t2</string>
+    <string name="_3">\t\t3</string>
+    <string name="_4">\t\t4</string>
+    <string name="_5">\t\t5+</string>
+    <string name="square_foot_range">Square Foot Range</string>
+    <string name="apply_filters">Apply filters</string>
+
+    <!--TODO remove-->
+    <string-array name="filter_spinner">
+        <item>Any</item>
+        <item>House</item>
+        <item>Condo</item>
+        <item>Townhouse</item>
+        <item>Other</item>
+    </string-array>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="profile">Profile</string>
+    <string name="filters">Filters</string>
+    <string name="login_activity">LogIn Activity</string>
+    <string name="reset">Reset</string>
+    <string name="log_out">Log Out</string>
+    <string name="added_to_bookmark">Added to bookmark</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="too_short_comment">Comment too short!</string>
+    <string name="comment_added">Comment added!</string>
+    <string name="removed_from_bookmarks">Removed from bookmarks</string>
+    <string name="forbidden_error">403</string>
+    <string name="please_log_in">Please log in or create an account!</string>
+    <string name="house">House</string>
+    <string name="condo">Condo</string>
+    <string name="townhouse">Townhouse</string>
+    <string name="other">Other</string>
+    <string name="videos">VIDEOS</string>
+    <string name="current_user_videos">videos</string>
+    <string name="email_err">This e-mail address already exists!</string>
+    <string name="login_err">Email or password is invalid!</string>
+    <string name="share_subject">"MyReelty.\n New house at "</string>
+    <string name="share_url">http://162.243.77.207/front-end/#/review/</string>
+    <string name="share_title">Share review!</string>
+</resources>

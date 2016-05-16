@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="searched_videos"
+            type="com.helio.myreelty.models.HouseModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_house_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:imageUrl1 = "@{searched_videos.pictures.sizes[searched_videos.pictures.getSizes().length/2].link}"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/item_house_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.helio.myreelty.common.custom_view.FontTextView
+                    android:id="@+id/searched_house_full_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='@{searched_videos.fullAddress}'
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:fontName="@string/roboto_medium" />
+
+                <com.helio.myreelty.common.custom_view.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text='@{"$ " + searched_videos.getPrice()}'
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    app:fontName="@string/roboto_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btn_item_house_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingTop="7dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_dots_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="dialog_model"
+            type="com.helio.myreelty.common.dialog.ItemDialogModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_three"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_dialog_img"
+                android:layout_width="18.8dp"
+                android:layout_height="16dp"
+                android:layout_marginBottom="9.5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="9dp"
+                app:loadImage="@{dialog_model.getResource()}"/>
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:id="@+id/item_dialog_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{dialog_model.getItemName()}"
+                android:textSize="12sp"
+                app:fontName="@string/roboto_medium" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_bookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:listitem="@layout/item_house_dialog">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/pic_empty_bookmarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"
+        android:src="@mipmap/test_join" />
+
+    <ImageView
+
+        android:layout_width="18dp"
+        android:layout_height="23dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/ic_bookmark_primary_24_px" />
+
+    <com.helio.myreelty.common.custom_view.FontTextView
+        android:id="@+id/android.support.v7.widget.RecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="41dp"
+        android:gravity="center"
+        android:text="@string/you_have_no_bookmarks_nthey_will_be_saved_here"
+        android:textColor="@color/warm_grey"
+        android:textSize="16sp"
+        app:fontName="@string/roboto_medium" />
+    </LinearLayout>
+</RelativeLayout>

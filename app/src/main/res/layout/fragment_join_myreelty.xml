@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/test_join" />
+
+        <com.helio.myreelty.common.custom_view.FontTextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:text="@string/join_myreelty_or_log_in"
+            android:textColor="@color/warm_grey"
+            android:textSize="16sp"
+            app:fontName="@string/roboto_medium" />
+
+
+        <LinearLayout
+            android:id="@+id/bt_join_with_facebook"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_join_with_fasebook"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="18dp"
+                android:src="@drawable/facebook_logo" />
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="@string/continue_with_facebook"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:fontName="@string/roboto_regular" />
+        </LinearLayout>
+
+        <com.helio.myreelty.common.custom_view.FontButton
+            android:id="@+id/bt_profile_sign_up"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/ronded_join_with_login"
+            android:text="@string/join_with_email"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:fontName="@string/roboto_regular" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="33dp"
+            >
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_an_account"
+                android:textColor="@color/black_53"
+                android:textSize="10sp"
+                app:fontName="@string/roboto_medium" />
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:id="@+id/profile_link_to_log_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/log_in"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                app:fontName="@string/roboto_medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

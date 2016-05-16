@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="house"
+            type="com.helio.myreelty.models.HouseModel" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/property_overview"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:fontName="@string/roboto_medium" />
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:id="@+id/video_details_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:text='@{house.description}'
+                android:textColor="@color/black_82"
+                android:textSize="12sp"
+                app:fontName="@string/roboto_regular"
+
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/black_12"/>
+
+
+            <com.helio.myreelty.common.custom_view.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/property_features"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontName="@string/roboto_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/price"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/property_type"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/beds"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/baths"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/size"
+                        android:textColor="@color/black_53"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text='@{house.FOR_SALE}'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text='@{String.valueOf(house.getPrice())+ " $"}'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text='@{house.propertyType}'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text='@{""+ house.beds}'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text='@{"" + house.baths }'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+
+                    <com.helio.myreelty.common.custom_view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text='@{house.square + " sqr"}'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontName="@string/roboto_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/video_details_map_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/details_map_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>
